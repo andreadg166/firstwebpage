@@ -1,0 +1,120 @@
+<DOCTYPE! html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name"description" content="Pagina de pasteleria, tortas, tartas, cupcakes, mesas dulces"/>
+		<meta name="keywords" content="tartas, tortas, cupcakes, mesas dulces, pasteleria, dulces"/>
+		<meta name"author" content="Iwanow - Gomez"/>
+		<title> Todo Dulce Pasteleria</title>
+		<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<script src="misFunciones.js"></script>
+<script type="text/javascript">
+
+function controlarCaracteres(){
+	var cadenas= document.getElementById("carta").value;
+	
+	if (cadenas.length==500){
+		alert("Cantidad de caracteres correcto");
+	}
+	else if(cadenas.length>500){
+		alert("Se excedio en caracteres");
+	}
+	else{
+			alert("Cantidad de caracteres correcto");
+	}
+}
+</script>
+<script>
+		function contarCaracteres(obj){
+			document.getElementById("charNum").innerHTML = obj.value.length + " caracteres";
+}
+</script>
+<header>
+	<br>
+	<center><a href="index.html"><img class="logo" src="tododulce.jpg" alt="#" title="Todo Dulce"></a></center>
+</header>
+<nav>
+		<ul class="barra">
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="productos.html">Productos</a>
+								<ul>
+									<li><a href="productos.html#tartas">Tartas</a></li>
+									<li><a href="productos.html#cheesecakes">Cheesecakes</a></li>
+									<li><a href="productos.html#frutal">Frutal</a></li>
+									<li><a href="productos.html#alfajores">Alfajores</a></li>
+									<li><a href="productos.html#brownies">Brownies</a></li>
+								</ul>
+			</li> 
+			<li><a href="contacto.html">Contactenos</a></li>
+			<li><a href="cv.html">Trabaja con nosotros</a></li>
+		</ul>
+</nav>
+<br><br><br><br><br>
+<section>
+<h2>Sumate a nuestro equipo</h2>
+			<form>
+			DNI <input class="caja" type="text" size="10" maxlength="8" placeholder="ingrese nº DNI" autofocus required>
+			<br><br>
+			Apellido <input class="caja" type="text" placeholder="ingrese apellido" required>
+			Nombre <input class="caja" type="text" placeholder="ingrese nombre" required>
+			<br><br>
+			Fecha nacimiento <input class="caja" type="date" id="fechNac" required>
+			<br><br>			
+			País de nacimiento <input class="caja" type="text" size="30" placeholder="ingrese país de nacimiento" required>
+			<br><br>
+			Domicilio <input class="caja" type="text" size="70" placeholder="ingrese domicilio" required>
+			<br><br>
+			Teléfono fijo: <input class="caja" type="text" size="20" placeholder="código de área">  <input class="caja" type="text" size="20" placeholder="número">
+			<br><br>
+			Teléfono celular: <input class="caja" type="text" size="20" placeholder="código de área (sin 0)" required> <input class="caja" type="text" size="20"  placeholder="número (sin 15)" required>	
+			<br><br>
+			Correo electrónico <input class="caja" type="email" size="70" placeholder="ingrese correo electrónico" required>	
+			<br><br>
+			Estado civil 
+			<br>
+					<select class="caja" name="Estado civil" size="3">
+						<option>Soltero/a</option>
+						<option>Casado/a</option>
+						<option>Juntado/a</option>
+						<option>Divorciado/a</option>
+						<option>Viudo/a</option>
+					</select>
+			<br><br>	
+			Subir foto:  
+			<form enctype="multipart/form-data" action="uploader.php" method="POST">
+			<input name="uploadedfile" type="file" >
+			<input type="submit" value="Subir archivo">
+			<br><br> 
+			Carta de presentación (maximo 500 caracteres):<br><textarea class="caja" rows="15" cols="100" maxlength="500" id="carta" onkeyup="contarCaracteres(this)"></textarea>
+			<br><br>
+			<input type="button" value="Corroborar cantidad de caracteres" onClick="controlarCaracteres()">
+			<br><br>
+			<p id="charNum">0 caracteres ingresados</p>
+			<br><br>
+			Idiomas?
+			<br><input type="checkbox" name="Ingles">Ingles 
+			<br> <input type="checkbox" name="Francés">Francés
+			<br> <input type="checkbox" name="Portugues">Portugues
+			<br> <input type="checkbox" name="Alemán">Alemán
+			<br> <input type="checkbox" name="Otro">Otro <input type="Text" name="Otros">
+			<br><br><br><br>	
+			<input class="subir" type="reset" value="Limpiar">
+			&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+			<input class="subir" type="button" value="Enviar" onClick="mayorEdad();">
+			<br><br>				
+		</form>
+	<br><br>
+<a class="subir" href="#top"><p align=center>Subir ↑</a></p>
+<br><br>	
+</section>
+
+<footer>
+<br>
+<small>Copyright &copy; Todo Dulce - 2018. Todos los Derechos reservados.
+		Tienda online creada por Iwanow-Gomez</small>
+</footer>
+<br>
+</body>
+</html>

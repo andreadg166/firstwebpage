@@ -1,0 +1,164 @@
+/*PAGINA PRINCIPAL*/
+* {
+  margin:0px;
+  padding:0px;
+}
+header, section, footer, nav {
+  display: block;
+}
+nav{
+ margin: 0 auto; /* Centro el contenedor */
+ width: 750px; /* Defino el ancho de mi página */
+}
+h2{
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  color: pink;
+  border: 2px solid;
+  border-radius: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #2E2E2E;
+  font: normal 30px mifuente,verdana,arial;
+}
+@font-face{
+	font-family: 'mifuente';
+	src: url('AdmirationPains.ttf');
+}
+ul {
+  list-style: none;
+} /*saco viñetas*/
+.logo{
+	border-radius: 80px;
+}
+.barra>li{
+  float: left;
+  margin: 30px;
+}/*cualquier elemento li que sea hijo directo de la clase .barra, se colocara cada uno a la derecha del otro*/
+.barra li a{
+  background-color: black;
+  color: #26D3C1;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 60px;
+  border: 1px solid;
+  border-color: #26D3C1;
+}/*fondo color negro, letra verde, text-decorationsaco subrayado, 
+con block colocamos ordenados un elemtno debajo del otro, padding espacio entre el elemento y su borde:
+10px arriba y abajo, 20px izquierda y derecha*/
+.barra li a:hover{
+  background-color: pink;
+} /*con la pseudo clase :hover al desplazar el curso por la barra ésta cambia a color rosa*/
+.barra li ul{
+  display: none;
+  min-width: 140px;
+  position: absolute;
+  z-index: 200; 
+}/* las etiquetas ul que pertenen a la etiqueta li de la clase .barra, las ocultamos.
+con min-width determinamos el ancho del elemento*/
+.barra li:hover>ul{
+  display: block;
+}/* cualquier elemento ul que sea hijo de li los pongo en bloque*/
+.barra li ul li{
+  position: relative;
+}
+.barra li ul li {
+  top: 0px;
+  padding: 5px 3px;
+}/*right especifica la posicion del elemento, en este caso la columna tartas, tortas, mesas dulces
+alfajores y cupcakes queda posicionada al lado de la columna del submenu productos con top especificamos
+la posicion de un elemento posicionado*/
+.galeria{
+  position: relative;
+  top: 10px;
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+.galeria .lista{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} /*con justify-content centramos el contenido*/
+.galeria .lista li{
+  margin-right: 10px;
+  margin-bottom: 8px;
+  list-style: none;
+}/*modifico margenes entre las imagenes y saco viñeta*/
+.galeria .lista li img{
+  position: relative;
+  width: 250px;
+  height: 350px;
+} /*modificacion imagenes*/
+form {
+	background: #FBF8FB;
+	margin: 10px auto;
+	width: 90%;
+	padding: 20px 10px 20px 10px;
+	color: pink;
+	border: 2px solid;
+	border-radius: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.caja{
+margin: 0px 10px;
+padding: 0px 10px;
+border: 1px solid pink;
+}
+footer{
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid;
+}
+.galeria {
+  position: relative;
+  top: 10px;
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+.galeria .lista{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.galeria .lista li{
+  margin-right: 10px;
+  margin-bottom: 8px;
+  list-style: none;
+}
+.galeria .lista li img{
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+p{
+ text-align:center; 
+}
+.nosotros{
+ margin: auto;
+ width: 90%;
+}
+/*PAGINA CONTACTO*/
+h3{ 
+  color: pink;
+  text-align: center;
+  font-size: 20px;
+}
+/*LINK SUBIR*/
+.subir{
+  color: #26D3C1;
+  font-size: 20px;
+  text-decoration:none;
+  font-family: cursive;
+}
+.subir:hover{
+  color: pink;
+  font-size: 20px;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+}
